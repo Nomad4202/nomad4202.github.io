@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - AI Generative Images</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script defer src="scripts.js"></script>
+</head>
+<body>
+    <header>
+        <h1>AI Generative Images</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="gallery-container">
+            <div class="sidebar">
+                <h3>Image Metadata</h3>
+                <div id="metadata">
+                    <p>Select an image to view its details.</p>
+                </div>
+            </div>
+            <div class="gallery">
+                <img src="image1.jpg" alt="AI Generated Image 1" data-metadata="Prompt: Sunset over mountains | Model: DALL-E 2">
+                <img src="image2.jpg" alt="AI Generated Image 2" data-metadata="Prompt: Cyberpunk cityscape | Model: MidJourney">
+                <!-- Add more images as needed -->
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Your Name</p>
+    </footer>
+</body>
+</html>
