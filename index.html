@@ -1,30 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Generative Images</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>3D Printed Creations Shop</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background: #f4f4f9;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+    header {
+      background: #222;
+      color: white;
+      padding: 1rem 2rem;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-weight: 700;
+      letter-spacing: 2px;
+    }
+    nav {
+      background: #333;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 0.5rem 0;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 0.5rem 1rem;
+      border-radius: 3px;
+      transition: background 0.3s ease;
+    }
+    nav a:hover {
+      background: #555;
+    }
+    main {
+      max-width: 960px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    section {
+      margin-bottom: 3rem;
+    }
+    h2 {
+      border-bottom: 3px solid #222;
+      padding-bottom: 0.3rem;
+      margin-bottom: 1rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+    .product-card {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgb(0 0 0 / 0.1);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.2s ease;
+    }
+    .product-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 16px rgb(0 0 0 / 0.15);
+    }
+    .product-image {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      background: #ddd;
+    }
+    .product-info {
+      flex-grow: 1;
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+    }
+    .product-info h3 {
+      margin: 0 0 0.5rem 0;
+      font-size: 1.2rem;
+    }
+    .product-info p {
+      flex-grow: 1;
+      font-size: 0.9rem;
+      color: #555;
+      margin-bottom: 1rem;
+    }
+    .product-info .price {
+      font-weight: 700;
+      color: #222;
+      font-size: 1.1rem;
+    }
+    footer {
+      background: #222;
+      color: white;
+      text-align: center;
+      padding: 1rem 2rem;
+      font-size: 0.9rem;
+    }
+    @media (max-width: 400px) {
+      nav {
+        flex-direction: column;
+        gap: 1rem;
+      }
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>AI Generative Images</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section class="welcome-section">
-            <h2>Welcome to My AI Generative Art Gallery</h2>
-            <p>Explore a collection of images created using various AI models and techniques. Click on the gallery to view more.</p>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2024 Your Name</p>
-    </footer>
+  <header>
+    <h1>3D Printed Creations</h1>
+  </header>
+  <nav>
+    <a href="#products">Products</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <main>
+    <section id="products">
+      <h2>Featured Products</h2>
+      <div class="products">
+        <article class="product-card">
+          <img src="https://via.placeholder.com/400x180?text=3D+Print+1" alt="3D Printed Product 1" class="product-image" />
+          <div class="product-info">
+            <h3>3D Printed Robot Figurine</h3>
+            <p>A detailed robot model printed with high-quality PLA filament, perfect for collectors and enthusiasts.</p>
+            <div class="price">£19.99</div>
+          </div>
+        </article>
+        <article class="product-card">
+          <img src="https://via.placeholder.com/400x180?text=3D+Print+2" alt="3D Printed Product 2" class="product-image" />
+          <div class="product-info">
+            <h3>Customizable Phone Stand</h3>
+            <p>Adjustable and sturdy phone stand, ideal for desks and nightstands, available in multiple colors.</p>
+            <div class="price">£14.50</div>
+          </div>
+        </article>
+        <article class="product-card">
+          <img src="https://via.placeholder.com/400x180?text=3D+Print+3" alt="3D Printed Product 3" class="product-image" />
+          <div class="product-info">
+            <h3>Hexagonal Planter Pot</h3>
+            <p>Modern geometric planter pot design, 3D printed with eco-friendly materials to brighten your space.</p>
+            <div class="price">£21.00</div>
+          </div>
+        </article>
+      </div>
+    </section>
+    <section id="about">
+      <h2>About Us</h2>
+      <p>We specialize in high-quality 3D printed items, tailored to bring creativity and modern design to everyday objects. Our products are crafted with care using sustainable materials and cutting-edge printing technology.</p>
+    </section>
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Interested in custom orders or have questions? Reach out to us!</p>
+      <form action="mailto:youremail@example.com" method="post" enctype="text/plain" style="max-width: 400px;">
+        <label for="name">Name:</label><br />
+        <input type="text" id="name" name="name" required style="width: 100%; margin-bottom: 1rem;" />
+        
+        <label for="email">Email:</label><br />
+        <input type="email" id="email" name="email" required style="width: 100%; margin-bottom: 1rem;" />
+        
+        <label for="message">Message:</label><br />
+        <textarea id="message" name="message" rows="4" required style="width: 100%; margin-bottom: 1rem;"></textarea>
+        
+        <button type="submit" style="background: #222; color: white; border: none; padding: 0.5rem 1rem; cursor: pointer;">Send</button>
+      </form>
+    </section>
+  </main>
+  <footer>
+    &copy; 2025 3D Printed Creations. All rights reserved.
+  </footer>
 </body>
 </html>
